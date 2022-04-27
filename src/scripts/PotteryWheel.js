@@ -12,17 +12,21 @@
 // id (increment this value each time the function is invoked)
 
 
-let PotteryWheel = {
-    shape: "" ,
-    weight: "",
-    height: "",
-    id: 1
-}
+// let PotteryWheel = {
+//     shape: "" ,
+//     weight: "",
+//     height: "",
+//     id: 1
+// }
+let initialKey = 1
 export const makePottery = (shape, weight, height) => {
-PotteryWheel.shape = shape
-PotteryWheel.weight = weight
-PotteryWheel.height = height
-PotteryWheel.id += 1 
+    let PotteryWheel = {
+        shape: shape ,
+        weight: weight,
+        height: height,
+        id: initialKey++
+    }
+
 return PotteryWheel
 }
 
