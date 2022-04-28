@@ -1,10 +1,12 @@
 let toBeSold = []
 
 export const toSellOrNotToSell = (object) => {
-  if (object.weight >= 6) {
+  if (object.weight >= 6 && object.cracked === false) {
       object.price = 40
   }
-  else object.price = 20
+  else if (object.weight < 6 && object.cracked === false) {
+   object.price = 20
+}
   if (object.cracked === false) {
     toBeSold.push(object)
   }
