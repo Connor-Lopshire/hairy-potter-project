@@ -1,7 +1,7 @@
 // Imports go first
 import { makePottery } from "./PotteryWheel.js";
 import { firePottery } from "./Kiln.js"
-
+import {toSellOrNotToSell} from "./PotteryCatalog.js"
 // Make 5 pieces of pottery at the wheel
 // let mug = makePottery()
 let smallBowl = makePottery("bowl", 3, 4)
@@ -15,16 +15,22 @@ let bigVase = makePottery("vase", 6, 12)
 let plate = makePottery("plate", 1, 5)
 // console.log(plate)
 let firedSmallBowl = firePottery(smallBowl, 2350)
-console.log(firedSmallBowl)
+// console.log(firedSmallBowl)
 let firedBigBowl = firePottery(bigBowl, 1750)
-console.log(firedBigBowl)
+// console.log(firedBigBowl)
 
 let firedSmallVase = firePottery(smallVase, 1500)
-console.log(firedSmallVase)
+// console.log(firedSmallVase)
 let firedBigVase = firePottery(bigVase, 2500)
-console.log(firedBigVase)
+// console.log(firedBigVase)
 let firedPlate = firePottery(plate, 2190)
-console.log(firedPlate)
+// console.log(firedPlate)
+ const smallBowlEval = toSellOrNotToSell(firedSmallBowl)
+ const bigBowlEval = toSellOrNotToSell(firedBigBowl)
+ const smallVaseEval = toSellOrNotToSell(firedSmallVase)
+ const bigVaseEval = toSellOrNotToSell(firedBigVase)
+ const plateEval = toSellOrNotToSell(firedPlate)
+ console.log(smallBowlEval)
 
 
 // Fire each piece of pottery in the kiln

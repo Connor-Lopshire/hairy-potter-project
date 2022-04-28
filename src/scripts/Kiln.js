@@ -1,7 +1,7 @@
 export const firePottery = (object, temp) => {
   object.fired = true
   if (temp > 2200 ) {
-      object.craked = true
+      object.cracked = true
   }
   else {
       object.cracked = false
